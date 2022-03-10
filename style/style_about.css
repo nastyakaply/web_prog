@@ -1,0 +1,47 @@
+/*about*/
+.about {
+    margin-top: 10px;
+    margin-right: 19%;
+    margin-left: 19%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.about__title{
+    margin-bottom: 10px;
+    color: #207b85;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid #207b85;
+    align-items: center;
+}
+
+.about__title:before {
+    margin-left: -100%;
+    left: -14px;
+}
+
+.about__title:after {
+    margin-right: -100%;
+    right: -14px;
+}
+
+.about__photo{
+    float: right; /* Выравнивание по левому краю */
+    margin: 10px 0 7px 7px; /* Отступы вокруг картинки */
+    width: 20vw;
+    height: 25vw;
+    border: 3px solid #207b85; /* Параметры рамки */
+    box-shadow: 0 0 7px #666; /* Параметры тени */
+}
+
+.about__text{
+    padding: 0 0 30px 0;
+}
+.about__text p{
+    margin: 20px 0 0;
+    font-size: 16px;
+    line-height: 22px;
+}
+
