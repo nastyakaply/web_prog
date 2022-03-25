@@ -30,9 +30,8 @@
 .about__photo{
     float: right; /* Выравнивание по левому краю */
     margin: 10px 0 7px 7px; /* Отступы вокруг картинки */
-    width: 20vw;
-    height: 25vw;
-    border: 3px solid #207b85; /* Параметры рамки */
+    width: 26vw;
+    height: 20vw;
     box-shadow: 0 0 7px #666; /* Параметры тени */
 }
 
