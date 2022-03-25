@@ -1,0 +1,121 @@
+
+.popups__inner{
+    background: rgba(38, 37, 37, 0.86);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999999;
+    display: none;
+}
+
+.popups__inner.active{
+    display: flex;
+}
+
+.popup{
+    width: 504px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 31px 42px 66px;
+    text-align: left;
+    position: relative;
+}
+
+.login__popup {
+    background: white;
+    padding: 10px 50px;
+    border-radius: 10px;
+
+
+}
+
+.close__popup{
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    font-size: 37px;
+    color: #494a4c;
+    cursor: pointer;
+
+}
+
+.registration__choice{
+    margin-top: 10px;
+    margin-bottom: 34px;
+}
+
+.login__popup a{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #494a4c;
+    text-decoration: none;
+}
+
+.login{
+    margin-right: 37px;
+    position: relative;
+}
+
+.login:before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: -19px;
+    background: #e0e0e0;
+}
+
+.choice__active{
+    color: #d9435d !important;
+}
+
+.form__login{
+    display: none;
+}
+
+.form__signin{
+    display: none;
+}
+
+.popup input {
+    display: block;
+    margin: 0 auto 15px;
+    width: 250px;
+    border: 1px solid #4a838a;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.popup input[type="submit"]{
+    justify-content: center;
+    align-items: center;
+    width: 185px;
+    height: 48px;
+    border: 1px solid #d9435d;
+    border-radius: 24px;
+    font-size: 16px;
+    /*margin-bottom: 0;*/
+    color: #ffffff;
+    background: #d9435d;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.popup input[type="submit"]:hover{
+    background: #ce1b3c;
+}
+
+.form__active{
+    display: block;
+}
+
+
+
+
+
