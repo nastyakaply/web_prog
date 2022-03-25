@@ -1,0 +1,164 @@
+
+
+.intro nav{
+    margin-top: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.intro__inner h4{
+    color: #207b85;
+    font-size: 25px;
+    margin-top: 20px;
+
+
+}
+
+.intro__nav{
+
+    margin-right: 40px;
+    color: #207b85;
+    text-decoration: none;
+    opacity: .75;
+    transition: opacity .1s linear;
+
+    font-size: 20px;
+
+
+}
+
+.intro__nav:hover{
+    border-bottom: 2px solid #207b85;
+    border-top: 2px solid #207b85;
+    border-right: 2px solid #207b85;
+    border-left: 2px solid #207b85;
+    opacity: 1;
+}
+
+
+
+/*features*/
+.catalog{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.catalog__item{
+    text-decoration: none;
+
+    display: block;
+    width: 200px;
+    margin: 10px 10px;
+    justify-content: center;
+
+}
+
+.catalog__icon{
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    display: block;
+}
+
+.catalog__item p{
+    font-size: 20px;
+    color: #207b85;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: .75;
+    transition: opacity .1s linear;
+
+}
+
+.catalog__item p:hover{
+    opacity: 1;
+}
+
+
+/*product*/
+
+.wrapper h3 {
+    font-size: 40px;
+    font-family: "Comic Sans MS";
+    color: #207b85;
+    text-align: center;
+}
+
+.product{
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.product__item{
+    position: relative;
+    display: block;
+    width: 350px;
+    margin: 10px 10px;
+    border-bottom: 1px solid #7ca3a8;
+    border-top: 1px solid #7ca3a8;
+    border-left: 1px solid #7ca3a8;
+    border-right: 1px solid #7ca3a8;
+    align-items: center;
+    padding: 15px 0;
+    transition: .3s ease-in;
+    background: white;
+
+}
+.product__item:hover {
+    border-bottom: 2px solid #207b85;
+    border-top: 2px solid #207b85;
+    border-right: 2px solid #207b85;
+    border-left: 2px solid #207b85;
+    opacity: 1;
+}
+.product__item img {
+    display: block;
+    width: 100%;
+}
+
+.product__title{
+    margin: 0 0 10px 0;
+    font-family: "Comic Sans MS";
+    color: #207b85;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.product__subtitle{
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.product__price{
+    font-family: "Comic Sans MS";
+    font-size: 15px;
+    color: #207b85;
+    display: block;
+    margin-bottom: 12px;
+}
+.product__button{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 12px;
+    background: #cccccc;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 28px;
+    transition: .3s ease-in;
+
+}
+
+.product__item:hover .product__button {
+    background: #207b85;
+}
+
