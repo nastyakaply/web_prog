@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Еда для собак</title>
     <link rel="stylesheet" href="style/product_style.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
 
@@ -27,9 +29,7 @@
                     <a class="nav__link" href="articles.html">
                         <img src="images/log2.png" width="30" height="30">
                         Статьи</a>
-                    <a class="nav__link" href="#">
-                        <img src="images/log3.png" width="30" height="30">
-                        Помощь</a>
+
                     <a class="nav__link" href="#">
                         <img src="images/log4.png" width="30" height="30">
                         Вход</a>
@@ -77,7 +77,7 @@
                         <h5 class="product__subtitle">Мясные колбаски для взрослых собак всех пород</h5>
                         <span class="product__price">142 ₽</span>
 <!--                        <a href="dog/food/tovar1.html" class="button">Посмотреть</a>-->
-                        <a href="" class="button">В корзину</a>
+                        <a href="product.html" class="button">Посмотреть</a>
                     </div>
 
                     <div class="product__item">
@@ -85,7 +85,7 @@
                         <h4 class="product__title">Pro Plan Duo Delice</h4>
                         <h5 class="product__subtitle">Сухой корм для взрослых собак всех пород с говядиной</h5>
                         <span class="product__price">1 196 ₽</span>
-                        <a href="" class="button">В корзину</a>
+                        <a href="" class="button">Посмотреть</a>
                     </div>
 
                     <div class="product__item">
@@ -93,7 +93,7 @@
                         <h4 class="product__title">Grandorf Lamb & Rice Junior All Breeds</h4>
                         <h5 class="product__subtitle">Сухой корм для щенков всех пород</h5>
                         <span class="product__price">2 110 ₽</span>
-                        <a href="" class="button">В корзину</a>
+                        <a href="" class="button">Посмотреть</a>
                     </div>
 
                     <div class="product__item">
@@ -101,7 +101,7 @@
                         <h4 class="product__title">Pronature Original NEW</h4>
                         <h5 class="product__subtitle">Сухой корм для взрослых собак всех пород с ягненком</h5>
                         <span class="product__price">299 ₽</span>
-                        <a href="" class="button">В корзину</a>
+                        <a href="" class="button">Посмотреть</a>
                     </div>
 
                     <div class="product__item">
@@ -109,7 +109,7 @@
                         <h4 class="product__title">Royal Canin Recovery</h4>
                         <h5 class="product__subtitle">Влажный лечебный корм для кошек и собак</h5>
                         <span class="product__price">452 ₽</span>
-                        <a href="" class="button">В корзину</a>
+                        <a href="" class="button">Посмотреть</a>
 
                     </div>
 
@@ -118,7 +118,7 @@
                         <h4 class="product__title">Pronature Life Chill</h4>
                         <h5 class="product__subtitle">Сухой корм для собак и щенков</h5>
                         <span class="product__price">678 ₽</span>
-                        <a href="" class="button">В корзину</a>
+                        <a href="" class="button">Посмотреть</a>
 
                     </div>
                 </div>
@@ -159,6 +159,55 @@
 
     </div>
 </footer>
+
+    <div class="popups__inner ">
+        <div class="popup login__popup">
+            <a class="close__popup">
+                x
+            </a>
+            <div class="registration__choice">
+                <a class="login">Вход</a>
+                <a class="signin">Зарегистрироваться</a>
+            </div>
+
+            <form class="form__login">
+                <input type="text" name="name" placeholder="Логин">
+                <input type="text" name="name" placeholder="Пароль">
+                <input type="submit"  value="Войти">
+            </form>
+            <form class="form__signin">
+                <input type="text" name="name" placeholder="Логин">
+                <input type="text" name="name" placeholder="Пароль">
+                <input type="text" name="name" placeholder="Подтверждение пароля">
+                <input type="submit"  value="Зарегистрироваться">
+            </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('.nav__link:last-child').on('click',function (){
+            $('.popups__inner').addClass('active')
+            $('.login').addClass('choice__active')
+            $('.form__login').addClass('form__active')
+
+        });
+        $('.close__popup').on('click',function (){
+            $('.popups__inner').removeClass('active')
+        });
+        $('.login').on('click',function (){
+            $('.login').addClass('choice__active')
+            $('.signin').removeClass('choice__active')
+            $('.form__login').addClass('form__active')
+            $('.form__signin').removeClass('form__active')
+        });
+        $('.signin').on('click',function (){
+            $('.signin').addClass('choice__active')
+            $('.login').removeClass('choice__active')
+            $('.form__signin').addClass('form__active')
+            $('.form__login').removeClass('form__active')
+        })
+    </script>
 
 </body>
 </html>
