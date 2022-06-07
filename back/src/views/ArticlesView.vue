@@ -4,67 +4,70 @@
     <div class="container">
       <div class="intro__inner">
         <h1 class="intro__title">
+            <img src="images/cat-animal.png" width="70" height="70">
           Статьи
         </h1>
-
       </div>
     </div>
   </div>
 
-
   <div class="articles">
     <div class="articles__item">
-      <router-link to="/article_text" class="articles__block">
-        <div class="entry__heading">Чем кормить шиншилу в домашних условиях</div>
-        <div itemprop="description">
-          "В статье мы рассмотрим питание шиншилл в домашних условиях, что можно и что нельзя давать животному, особеннос..."
-        </div>
-        <figure>
-          <img class="articles__photo" src="https://lemurrr.ru/medias/sys_master/images/h53/hd8/8904165228574.jpg">
-        </figure>
-      </router-link>
-
-      <router-link to="/article_text" class="articles__block">
-        <div class="entry__heading">Что такое когтерезка для кошек и как ей пользоваться</div>
-        <div itemprop="description">
-          "Чтобы исключить порчу имущества в доме, можно приобрести специальный аксессуар для аккуратного срезания кошачь..."
-        </div>
-        <figure>
-          <img class="articles__photo" src="https://lemurrr.ru/medias/sys_master/images/h47/h90/8900820074526.png">
-        </figure>
-      </router-link>
-      <router-link to="/article_text" class="articles__block">
-        <div class="entry__heading">Как подобрать хороший лоток-туалет для кошки </div>
-        <div itemprop="description">
-          "В статье мы рассмотрим, какие бывают лотки для кошек, на что обратить внимание при выборе подходящего кошачьег..."
-        </div>
-        <figure>
-          <img class="articles__photo" src="https://lemurrr.ru/medias/sys_master/images/h33/h48/8895449464862.jpg">
-        </figure>
-      </router-link>
-      <router-link to="/article_text" class="articles__block">
-        <div class="entry__heading">Какие прививки нужно делать собакам и в каком возрасте </div>
-        <div itemprop="description">
-          "В статье мы рассмотрим важность прививок для собак, от каких заболеваний они защищают, виды препаратов и схемы..."
-        </div>
-        <figure>
-          <img class="articles__photo" src="https://lemurrr.ru/medias/sys_master/images/he9/hc4/8904424882206.jpg">
-        </figure>
-      </router-link>
-
-
-
+        <state_catalog
+            v-for="state in articles"
+            :key="state.id"
+            v-bind:state_data="state"
+        />
     </div>
 
   </div>
 </template>
 
 <script>
+import state_catalog from "@/components/state/state_catalog";
+import axios from "axios";
 export default {
-  name: "ArticlesView"
+  name: "ArticlesView",
+    components:{state_catalog},
+    data(){
+        return {
+            articles: []
+            // states: [
+            //     {
+            //         id: 1,
+            //         title:'Чем кормить шиншилу в домашних условиях',
+            //         subtitle: 'В статье мы рассмотрим питание шиншилл в домашних условиях, что можно и что нельзя давать животному, особеннос...',
+            //         image: "https://lemurrr.ru/medias/sys_master/images/h53/hd8/8904165228574.jpg"
+            //     },
+            //     {
+            //         id: 2,
+            //         title:'Что такое когтерезка для кошек и как ей пользоваться',
+            //         subtitle: 'Чтобы исключить порчу имущества в доме, можно приобрести специальный аксессуар для аккуратного срезания кошачь...',
+            //         image: "https://lemurrr.ru/medias/sys_master/images/h47/h90/8900820074526.png"
+            //     },
+            // ],
+        }
+    },
+    created() {
+        // api
+        this.id = this.$route.params.id
+        axios.get('http://localhost:3000/article ')
+            .then((response) => this.articles = response.data)
+            .catch((error) => {
+                console.log(error);
+            })
+
+    },
 }
 </script>
 
 <style scoped>
+.intro{
+    height: 250px;
+}
+.intro__title img{
+    margin: 15px 0 0;
+
+}
 
 </style>

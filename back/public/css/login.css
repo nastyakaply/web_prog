@@ -3,13 +3,15 @@
     background: rgba(38, 37, 37, 0.86);
     position: fixed;
     top: 0;
+    right: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999999999;
-    display: none;
+    /*display: none;*/
 }
 
 .popups__inner.active{
@@ -60,24 +62,25 @@
 .login{
     margin-right: 37px;
     position: relative;
+
 }
 
-.login:before {
-    position: absolute;
-    content: '';
-    width: 1px;
-    height: 100%;
-    top: 0;
-    right: -19px;
-    background: #e0e0e0;
-}
+/*.login:before {*/
+/*    position: absolute;*/
+/*    content: '';*/
+/*    width: 1px;*/
+/*    height: 100%;*/
+/*    top: 0;*/
+/*    right: -19px;*/
+/*    background: #e0e0e0;*/
+/*}*/
 
 .choice__active{
     color: #d9435d !important;
 }
 
 .form__login{
-    display: none;
+    /*display: none;*/
 }
 
 .form__signin{

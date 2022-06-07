@@ -159,9 +159,9 @@
 .btn__back{
     text-decoration: none;
     color: #fff;
-    border: 1px solid #207b85;;
+    border: 1px solid #820e86;;
     border-radius: 3px;
-    background: #207b85;
+    background: #820e86;
 }
 
 .btn__back:before{
@@ -177,5 +177,5 @@
 .btn__back:hover{
     transition: all .2s linear;
     background: none;
-    color: #207b85;
+    color: #820e86;
 }

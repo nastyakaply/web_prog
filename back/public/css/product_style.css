@@ -101,12 +101,9 @@
 .product__item{
     position: relative;
     display: block;
-    width: 350px;
+    width: 250px;
     margin: 10px 10px;
-    border-bottom: 1px solid #7ca3a8;
-    border-top: 1px solid #7ca3a8;
-    border-left: 1px solid #7ca3a8;
-    border-right: 1px solid #7ca3a8;
+    border: solid 2px #932f91;
     align-items: center;
     padding: 15px 0;
     transition: .3s ease-in;
@@ -114,10 +111,7 @@
 
 }
 .product__item:hover {
-    border-bottom: 2px solid #207b85;
-    border-top: 2px solid #207b85;
-    border-right: 2px solid #207b85;
-    border-left: 2px solid #207b85;
+    border: solid 3px #932f91;
     opacity: 1;
 }
 .product__item img {
@@ -126,22 +120,20 @@
 }
 
 .product__title{
-    margin: 0 0 10px 0;
-    font-family: "Comic Sans MS";
-    color: #207b85;
+    margin: 0 0 5px 0;
+    color: #000000;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
 }
 .product__subtitle{
-    font-size: 10px;
+    font-size: 9px;
     text-transform: uppercase;
 }
 .product__price{
-    font-family: "Comic Sans MS";
     font-size: 15px;
-    color: #207b85;
+    color: #d71e1e;
     display: block;
     margin-bottom: 12px;
 }
